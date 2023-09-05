@@ -9,3 +9,4 @@ Com base em sua experiência, você sugere como um passo inicial a identificaç�
 
 Neste desafio, você terá a oportunidade de explorar, tratar e modelar dados em busca de insights valiosos. Vamos focar na otimização e disponibilização do modelo para alcançar o melhor resultado possível na tomada de decisões estratégicas da Novexus. Além disso, temos uma tarefa especial para você: desenvolver um **APP Web** que facilite a classificação de potenciais clientes, tornando todo o processo mais ágil e eficiente.
 
+## Semana 1
