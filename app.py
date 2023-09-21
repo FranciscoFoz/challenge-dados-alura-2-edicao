@@ -1,6 +1,8 @@
 import streamlit as st
 from joblib import load
 import pandas as pd
+from sklearn.ensemble import HistGradientBoostingClassifier
+
 
 pd.options.display.max_columns = 999
 
@@ -14,6 +16,7 @@ st.image('https://raw.githubusercontent.com/FranciscoFoz/challenge-dados-alura-2
          width=700)
 st.title('SIMULADOR DE CHURN:chart_with_downwards_trend:')
 
+# PAINÉL DE INSERÇÕES
 expander_pessoal = st.expander("Pessoal")
 expander_servicos = st.expander("Serviços")
 expander_contrato = st.expander("Contrato")
@@ -60,11 +63,12 @@ with expander_contrato:
     dict_respostas['fatura_mensal'] = st.slider(perguntas['fatura_mensal'],
                                                 help='Pode-se mover a barra usando as setas do teclado',
                                                 min_value=0, max_value=200, step=1)
-        
-''''''
+    
+    
+
 respostas = pd.DataFrame([dict_respostas])
 
-respostas_1 =respostas.replace({'Não':0,'Sim':1})
+respostas_1 = respostas.replace({'Não':0,'Sim':1})
 
 variaveis_numericas = respostas_1[['meses_de_contrato','fatura_mensal']]
 
@@ -80,15 +84,23 @@ variaveis_multiplas_normalizadas = pd.get_dummies(variaveis_multiplas,dtype=int)
 df_final = pd.concat([variaveis_binarias,variaveis_numericas,variaveis_multiplas_normalizadas],axis=1)
 
 
-modelo = load('src/models/modelo_churn_novexus_1.joblib')
+modelo = load('models/melhor_modelo.pkl')
 features = load('src/features/features.joblib')
 
 df_final = df_final.reindex(columns=features, fill_value=0)
-df_final
 
---------------------------------------VERIFICAR MODELO ------------------------------------
-print(modelo.predict(df_final))
+resultado = modelo.predict(df_final)[0]
 
--------------------------------------REFATORAR TRANSFORMAÇÃO (FUNÇÕES)----------------------------------------
--------------------------------------BOTÃO--------------------------------------------------------------------
--------------------------------------PROBABILIDADE------------------------------------------------------------
+print(resultado)
+
+if resultado > 0:
+    prob = (modelo.predict_proba(df_final)[0][1] * 100).round(2)
+else:
+    prob = (modelo.predict_proba(df_final)[0][0] * 100).round(2)
+print(prob)
+
+df_final.columns
+
+#-------------------------------------REFATORAR TRANSFORMAÇÃO (FUNÇÕES)----------------------------------------
+#-------------------------------------BOTÃO--------------------------------------------------------------------
+#-------------------------------------PROBABILIDADE------------------------------------------------------------
