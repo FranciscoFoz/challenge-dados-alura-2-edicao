@@ -103,7 +103,7 @@ with expander_contrato:
                                                 min_value=0, max_value=200, step=1)
     
 
-if st.button("Avaliar"):
+if st.button("Previsão"):
     df_processado = processar_dados(dict_respostas)
     resultado, prob_churn = prever_resultado(df_processado)
 
