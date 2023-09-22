@@ -15,11 +15,9 @@
 ## Contexto
 ![](https://raw.githubusercontent.com/FranciscoFoz/challenge-dados-alura-2-edicao/main/Identidade%20visual/Logo%20(6).png)
 
-Você é a pessoa contratada como cientista de dados pela operadora de telecomunicações Novexus. Na reunião inicial com as pessoas responsáveis pela área de vendas da empresa, foi explicada a importância de reduzir a **Taxa de Evasão de Clientes**, também conhecida como **Churn Rate**.
+Este projeto representa o resultado final do "Challenge Dados - Alura 3ª edição", realizado em setembro de 2023, um desafio simulado projetado para aprimorar as habilidades em Ciência de Dados. O desafio abrangeu a exploração, tratamento e modelagem de dados com o propósito de descobrir insights valiosos. Além disso, o foco estava na otimização do modelo e na sua disponibilização para alcançar os melhores resultados na tomada de decisões estratégicas da Novexus. Como parte do projeto, também foi desenvolvido um aplicativo web que simplifica a classificação de potenciais clientes, tornando todo o processo mais eficaz.
 
-Com base em sua experiência, você sugere como um passo inicial a identificação de clientes que teriam uma maior chance de deixar a Novexus. Por conta disso, todo o time percebe o quanto será interessante investigar algumas características de clientes ou dos planos de clientes para tentar **CLASSIFICAR** essas pessoas como potenciais candidatas a deixar a empresa ou não.
-
-Neste desafio, você terá a oportunidade de explorar, tratar e modelar dados em busca de insights valiosos. Vamos focar na otimização e disponibilização do modelo para alcançar o melhor resultado possível na tomada de decisões estratégicas da Novexus. Além disso, temos uma tarefa especial para você: desenvolver um **APP Web** que facilite a classificação de potenciais clientes, tornando todo o processo mais ágil e eficiente.
+O cenário desse desafio envolveu a contratação de um cientista de dados pela Novexus com o objetivo primordial de reduzir a Taxa de Evasão de Clientes, também conhecida como Churn Rate.
 
 ## Semana 1 - Limpeza e análise exploratória dos dados ✅
 Foram realizadas as transformações iniciais e análise exploratória dos dados. 
