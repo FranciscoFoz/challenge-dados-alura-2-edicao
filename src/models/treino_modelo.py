@@ -146,7 +146,7 @@ def treinar_modelo(df, modelo):
 
 def salvar_modelo(modelo, nome_arquivo):
     
-    caminho = f'/home/franciscofoz/Documents/GitHub/challenge-dados-alura-2-edicao/Models/{nome_arquivo}.pkl'
+    caminho = f'/home/franciscofoz/Documents/GitHub/challenge-dados-alura-2-edicao/models/{nome_arquivo}.pkl'
     
     with open(caminho, 'wb') as arquivo_modelo:
         pickle.dump(modelo, arquivo_modelo)
@@ -161,9 +161,10 @@ def salvar_modelo(modelo, nome_arquivo):
 
 dados = 'https://challenge-data-science-3ed.s3.amazonaws.com/Telco-Customer-Churn.json'
 
-melhor_modelo = load('/home/franciscofoz/Documents/GitHub/challenge-dados-alura-2-edicao/Notebooks/modelo_churn_novexus_1.joblib')
+melhor_modelo = load('/home/franciscofoz/Documents/GitHub/challenge-dados-alura-2-edicao/models/modelo_churn_novexus_1.joblib')
 
 df = pipeline_transformacao(dados)
+
 
 # APENAS VERIFICAÇÃO DO TREINO FINAL
 #treinar_e_avaliar_modelo(df,melhor_modelo)
@@ -174,7 +175,6 @@ modelo = treinar_modelo(df,melhor_modelo)
 
 salvar_modelo(modelo, 'melhor_modelo')
 
-
-            
-
-
+#Exportando features
+features = df.drop(['churn'],axis=1).columns
+dump(features,'/home/franciscofoz/Documents/GitHub/challenge-dados-alura-2-edicao/src/features/features.joblib')

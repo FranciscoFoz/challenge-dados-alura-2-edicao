@@ -6,7 +6,7 @@ from sklearn.ensemble import HistGradientBoostingClassifier
 pd.options.display.max_columns = 999
 
 
-
+#FUNÇÕES
 def processar_dados(dict_respostas):
 
     features = load('src/features/features.joblib')
@@ -43,16 +43,17 @@ def prever_resultado(df):
 
 
 
-
+#CONFICURAÇÕES INICIAIS
 st.set_page_config(
     layout='wide',
     page_title='predicao-churn-novexus',
     page_icon=':chart_with_downwards_trend:'
 )
 
+#LOGO E TÍTULO DO APP
 st.image('https://raw.githubusercontent.com/FranciscoFoz/challenge-dados-alura-2-edicao/main/reports/figures/Identidade%20visual/Logo%20(2).png',
          width=700)
-st.title('SIMULADOR DE CHURN:chart_with_downwards_trend:')
+st.title('SIMULADOR DE CHURN')
 
 # PAINÉL DE INSERÇÕES
 expander_pessoal = st.expander("Pessoal")
