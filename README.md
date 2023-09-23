@@ -3,14 +3,13 @@
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
-| :sparkles: Nome        | **ML APP - Classificação de churn **
+| :sparkles: Nome        | **ML APP - Classificação de churn**
 | :label: Tecnologias | python
 | :rocket: URL         | https://novexus-simulador-churn.streamlit.app/
 | :fire: Desafio     | 
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
 ![](reports/figures/app_home.png)
-
 
 ## Contexto
 ![](https://raw.githubusercontent.com/FranciscoFoz/challenge-dados-alura-2-edicao/main/Identidade%20visual/Logo%20(6).png)
