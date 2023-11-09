@@ -9,7 +9,7 @@
 | :fire: Desafio     | 
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](reports/figures/app_home.png)
+![](reports/figures/app_home.png#vitrinedev)
 
 ## Contexto
 ![](https://raw.githubusercontent.com/FranciscoFoz/challenge-dados-alura-2-edicao/main/Identidade%20visual/Logo%20(6).png)
